@@ -1,0 +1,31 @@
+.container {
+  max-width: 1400px;
+  margin: auto;
+  p {
+    margin: 0 50px;
+  }
+}
+
+button {
+  color: $color-secundary;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid $color-primary;
+  border-radius: 1em;
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif;
+  margin: 25px 10px 10px 10px;
+  font-size: 1.2em;
+  &:hover {
+    background-color: $color-primary;
+  }
+  a {
+    color: $color-secundary;
+    text-decoration: none;
+    font-family: "Fira Sans", sans-serif;
+    &:hover {
+      color: white;
+    }
+  }
+}

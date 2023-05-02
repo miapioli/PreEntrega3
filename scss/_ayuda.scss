@@ -1,0 +1,58 @@
+@media (max-width: 504px) {
+  .pag-name {
+    display: none;
+  }
+}
+
+.contenedor-ayuda {
+  background-color: rgb(240, 220, 202);
+  text-align: center;
+  padding: 2em;
+}
+/* Formu */
+.cuerpoform {
+  display: flex;
+}
+
+.form {
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form__title {
+  font-size: 1.8rem;
+  margin-bottom: 0.3em;
+}
+
+.form__container {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+.completar {
+  position: relative;
+}
+
+.form__input {
+  width: 50%;
+
+  color: $color-primary;
+  font-size: 1rem;
+
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $color-primary;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.form__submit {
+  border: 2px solid $color-primary;
+  padding: 5px 10px;
+  font-family: "Rubik", sans-serif;
+  border-radius: 2em;
+  margin: 15px;
+  background-color: white;
+}

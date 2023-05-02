@@ -1,0 +1,110 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin: 15px 0;
+}
+
+.nav-logo {
+  display: inline-block;
+  padding: 5px 0 0 10px;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  background-color: white;
+}
+
+.menu a {
+  display: block;
+  padding: 30px;
+  color: black;
+  &:hover {
+    background-color: $color-primary;
+  }
+}
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}
+.hamb-line {
+  background-color: $color-tercera;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+  &::before,
+  &::after {
+    background-color: $color-tercera;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  &::before {
+    top: 5px;
+  }
+  &::after {
+    top: -5px;
+  }
+}
+
+.side-menu {
+  display: none;
+  &:checked {
+    ~ nav {
+      max-height: 100%;
+    }
+    ~ .hamb .hamb-line {
+      background: transparent;
+      &::before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+      &::after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1140px) {
+  nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+    a:hover {
+      color: rgb(250, 250, 250);
+    }
+  }
+  .hamb {
+    display: none;
+  }
+  .contenedor-ayuda h1,
+  .contenedor-ayuda h2 {
+    text-align: start;
+    padding-left: 2em;
+  }
+}
+@media (max-width: 504px) {
+  .pag-name {
+    display: none;
+  }
+}
