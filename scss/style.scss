@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+h1 {
+  font-size: 2.5em;
+  font-family: "Rubik", sans-serif;
+}
+h2 {
+  font-size: 1.7em;
+  font-family: "Rubik", sans-serif;
+}
+p {
+  font-size: 1em;
+  font-family: "Bona Nova", serif;
+}
+ul {
+  list-style: none;
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: "Fira Sans", sans-serif;
+  }
+}
+$color-primary: rgb(4, 161, 12);
+$color-secundary: rgb(12, 143, 237);
+$color-tercera: rgb(255, 140, 0);
+.container {
+  max-width: 1400px;
+  margin: auto;
+  p {
+    margin: 0 50px;
+  }
+}
+
+button {
+  color: $color-secundary;
+  text-decoration: none;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid $color-primary;
+  border-radius: 1em;
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif;
+  margin: 25px 10px 10px 10px;
+  font-size: 1.2em;
+  &:hover {
+    background-color: $color-primary;
+  }
+  a {
+    color: $color-secundary;
+    text-decoration: none;
+    font-family: "Fira Sans", sans-serif;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin: 15px 0;
+}
+
+.nav-logo {
+  display: inline-block;
+  padding: 5px 0 0 10px;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  background-color: white;
+}
+
+.menu a {
+  display: block;
+  padding: 30px;
+  color: black;
+  &:hover {
+    background-color: $color-primary;
+  }
+}
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}
+.hamb-line {
+  background-color: $color-tercera;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+  &::before,
+  &::after {
+    background-color: $color-tercera;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  &::before {
+    top: 5px;
+  }
+  &::after {
+    top: -5px;
+  }
+}
+
+.side-menu {
+  display: none;
+  &:checked {
+    ~ nav {
+      max-height: 100%;
+    }
+    ~ .hamb .hamb-line {
+      background: transparent;
+      &::before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+      &::after {
+        transform: rotate(45deg);
+        top: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1140px) {
+  nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+    a:hover {
+      color: rgb(250, 250, 250);
+    }
+  }
+  .hamb {
+    display: none;
+  }
+  .contenedor-ayuda h1,
+  .contenedor-ayuda h2 {
+    text-align: start;
+    padding-left: 2em;
+  }
+}
+@media (max-width: 504px) {
+  .pag-name {
+    display: none;
+  }
+}
+
+/* Hero */
+.main-index {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.651),
+      rgba(249, 250, 249, 0.74)
+    ),
+    url(https://b2283449.smushcdn.com/2283449/wp-content/uploads/2021/05/Dia-de-la-nutricion.jpg?lossy=1&strip=1&webp=1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 70vh;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  h1 {
+    padding: 20px;
+    color: rgb(0, 0, 0);
+  }
+}
+.orangecolor {
+  color: $color-tercera;
+}
+
+/* Cards */
+.card {
+  margin: 1.3;
+  .container {
+    text-align: center;
+    padding: 15px 20px;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 245, 245);
+  a {
+    margin: 10px;
+  }
+}
+.copy {
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 504px) {
+  .pag-name {
+    display: none;
+  }
+}
+
+.contenedor-ayuda {
+  background-color: rgb(240, 220, 202);
+  text-align: center;
+  padding: 2em;
+}
+/* Formu */
+.cuerpoform {
+  display: flex;
+}
+
+.form {
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form__title {
+  font-size: 1.8rem;
+  margin-bottom: 0.3em;
+}
+
+.form__container {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+.completar {
+  position: relative;
+}
+
+.form__input {
+  width: 50%;
+
+  color: $color-primary;
+  font-size: 1rem;
+
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $color-primary;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.form__submit {
+  border: 2px solid $color-primary;
+  padding: 5px 10px;
+  font-family: "Rubik", sans-serif;
+  border-radius: 2em;
+  margin: 15px;
+  background-color: white;
+}
+
+.titulo-nosotros {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.651),
+      rgba(249, 250, 249, 0.74)
+    ),
+    url(../images/fondo-nosotros.jpg);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 5rem;
+  color: rgb(0, 0, 0);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.main-nosotros {
+  text-align: center;
+  p {
+    padding: 2em 3em;
+    text-align: center;
+  }
+  button {
+    margin: 0 0 1em 0;
+  }
+}
+.imagen-nosotros {
+  display: none;
+}
+/* media nosotros */
+@media (min-width: 950px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto 500px;
+
+    grid-template-areas:
+      "titulo titulo"
+      "parrafo imagen";
+  }
+  .titulo-nosotros {
+    grid-area: titulo;
+    text-align: start;
+    padding-left: 6em;
+  }
+
+  .parrafo-nosotros {
+    grid-area: parrafo;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .unete {
+    font-size: 1.5em;
+  }
+  .imagen-nosotros {
+    grid-area: imagen;
+    display: block;
+    width: 300px;
+    margin: auto;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
