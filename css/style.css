@@ -371,12 +371,12 @@ ul a {
   display: flex;
   justify-content: center;
 }
-.menu_macro li .link_macro {
+.menu_macro .link_macro {
   padding: 4px;
   color: rgb(12, 143, 237);
   font-size: 1.3em;
 }
-.menu_macro li .link_macro:hover {
+.menu_macro .link_macro:hover {
   background-color: rgb(4, 161, 12);
   color: white;
   border-radius: 0.8em;
@@ -419,6 +419,142 @@ ul a {
 
 #title_carbo {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.651), rgba(249, 250, 249, 0.74)), url(https://medlineplus.gov/images/Carbohydrates_share.jpg);
+}
+
+@media (min-width: 900px) {
+  .hero_img_macro {
+    display: block;
+  }
+  .hero_p_macro {
+    padding: 5px 60px;
+    display: block;
+  }
+  .grid-container-macro {
+    display: grid;
+    grid-template-columns: auto 500px;
+    grid-template-areas: "inicio derecha" "inicio derecha";
+  }
+  .inicio-macro {
+    grid-area: inicio;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .derecha-macro {
+    grid-area: derecha;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+  }
+  .title_macro {
+    font-size: 3em;
+    text-align: start;
+  }
+}
+.link_macro {
+  padding: 4px;
+  color: rgb(12, 143, 237);
+  font-size: 1.3em;
+}
+.link_macro:hover {
+  background-color: rgb(4, 161, 12);
+  color: white;
+  border-radius: 0.8em;
+}
+
+.hero_micro {
+  text-align: center;
+  background-color: rgb(248, 241, 233);
+  padding: 40px 0 40px 0;
+}
+
+.hero_img_micro,
+.hero_p_micro {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title_micro {
+  padding-bottom: 20px;
+}
+
+.minerales-oligoelementos,
+.vitamina {
+  text-align: center;
+  padding: 0, 70px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.minerales-oligoelementos p,
+.vitamina p {
+  margin: 3px 60px;
+  text-align: center;
+}
+
+#vitamina,
+#mineral {
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin: 30px 0;
+}
+
+#vitamina {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.651), rgba(249, 250, 249, 0.74)), url(https://media.ladieteticabarcelona.com/blog/post-880-800x800.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#mineral {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.651), rgba(249, 250, 249, 0.74)), url(https://alimentacionaliada.com/wp-content/uploads/2020/08/Minerales-y-oligoelementos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 900px) {
+  .hero_img_micro {
+    display: block;
+    height: 80%;
+  }
+  .hero_p_micro {
+    padding: 5px 20px;
+    display: block;
+  }
+  .grid-container-micro {
+    display: grid;
+    grid-template-columns: auto 500px;
+    grid-template-areas: "inicio derecha derecha" "inicio derecha derecha";
+  }
+  .inicio-micro {
+    grid-area: inicio;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .derecha-micro {
+    grid-area: derecha;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .derecha-micro ul li {
+    padding: 10px 0 0 0;
+  }
+  .title_micro {
+    font-size: 4em;
+    text-align: start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
