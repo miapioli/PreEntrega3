@@ -1,0 +1,80 @@
+.hero_img_macro {
+  display: none;
+}
+.hero_p_macro {
+  display: none;
+}
+
+.hero_macro {
+  text-align: center;
+  background-color: rgb(248, 241, 233);
+  padding: 30px 0;
+}
+.title_macro {
+  font-size: 30px;
+}
+.menu_macro {
+  display: flex;
+  justify-content: center;
+  li .link_macro {
+    padding: 4px;
+    color: $color-secundary;
+    font-size: 1.3em;
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+      border-radius: 0.8em;
+    }
+  }
+}
+
+.macro_card_1,
+.macro_card_2,
+.macro_card_3 {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    margin: 3px 60px;
+    text-align: center;
+  }
+}
+#title_grasa,
+#title_prote,
+#title_carbo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 70px;
+  text-align: center;
+  color: white;
+  margin: 0 0 35px 0;
+}
+
+#title_grasa {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.651),
+      rgba(249, 250, 249, 0.74)
+    ),
+    url(https://media.istockphoto.com/id/1133428350/es/foto/selecci%C3%B3n-de-grasas-no-saturadas-saludables-omega-3-pescado-aguacate-aceitunas-nueces-y.jpg?s=612x612&w=0&k=20&c=nrfdEUnHuXFry678l_W7_SbdjpMXhx5BobYzC9zMXsU=);
+}
+#title_prote {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.651),
+      rgba(249, 250, 249, 0.74)
+    ),
+    url(https://i.blogs.es/792391/alimentos-ricos-proteinas-vitonica/450_1000.webp);
+}
+
+#title_carbo {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.651),
+      rgba(249, 250, 249, 0.74)
+    ),
+    url(https://medlineplus.gov/images/Carbohydrates_share.jpg);
+}
