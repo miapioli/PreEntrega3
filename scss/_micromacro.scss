@@ -147,14 +147,14 @@ a {
 .minerales-oligoelementos,
 .vitamina {
   text-align: center;
-  padding: 0, 70px;
+  padding: 0, 90px;
   justify-content: center;
   display: flex;
   align-items: center;
   flex-direction: column;
 
   p {
-    margin: 3px 60px;
+    margin: 30px 60px;
     text-align: center;
   }
 }
@@ -191,6 +191,12 @@ a {
 }
 
 @media (min-width: 900px) {
+  .minerales-oligoelementos,
+  .vitamina {
+    p {
+      padding: 3px 80px;
+    }
+  }
   .hero_img_micro {
     display: block;
     height: 80%;
@@ -227,5 +233,9 @@ a {
   .title_micro {
     font-size: 4em;
     text-align: start;
+
+    .hero_micro {
+      padding: 0;
+    }
   }
 }
