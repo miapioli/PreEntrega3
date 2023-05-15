@@ -17,7 +17,7 @@
 .main-nosotros {
   text-align: center;
   p {
-    padding: 2em 3em;
+    padding: 2em 2em;
     text-align: center;
   }
   button {
@@ -26,6 +26,20 @@
 }
 .imagen-nosotros {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .img-nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imagen-nosotros {
+    display: block;
+    width: 500px;
+    height: auto;
+    padding: 50px 0;
+  }
 }
 /* media nosotros */
 @media (min-width: 950px) {
@@ -70,9 +84,6 @@
 .container {
   max-width: 1400px;
   margin: auto;
-  p {
-    margin: 0 50px;
-  }
 }
 * {
   margin: 0;
@@ -92,8 +103,8 @@ h2 {
   font-family: "Rubik", sans-serif;
 }
 p {
-  font-size: 1em;
   font-family: "Bona Nova", serif;
+  font-size: 17px;
 }
 ul {
   list-style: none;
